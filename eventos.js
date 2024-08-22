@@ -1,8 +1,14 @@
 document.addEventListener('DOMContentLoaded', function(){
 
-const boton = document.getElementById("boton-div");
+const div = document.getElementById("el-Div")
+const boton = document.getElementById("el-Boton");
 
-    boton.addEventListener("click", function(){
+    div.addEventListener("click", function(){
         alert("Hola! Soy el div");
     });
+
+    boton.addEventListener("click", function(evento){
+        evento.stopPropagation();
+        alert("Hola!")
+    })
 })
